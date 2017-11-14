@@ -1,0 +1,5 @@
+[user]
+  name = Chris Stadler
+	email = chrisstadler@gmail.com
+[core]
+    editor = 'atom' --wait
