@@ -1,0 +1,141 @@
+AccessorMethodName:
+  Enabled: false
+
+AlignArray:
+  Enabled: false
+
+AlignHash:
+  Enabled: false
+
+AlignParameters:
+  Enabled: false
+
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    # Exempt auto-generated and third-party files from style guidelines.
+    - db/schema.rb
+    - vendor/**/*
+  TargetRubyVersion: 2.4
+
+AssignmentInCondition:
+  Enabled: false
+
+BlockLength:
+  Enabled: false
+
+CaseIndentation:
+  IndentWhenRelativeTo: end
+
+ClassAndModuleChildren:
+  Enabled: false
+
+ClassLength:
+  Enabled: false
+
+CollectionMethods:
+  Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
+
+Delegate:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+DotPosition:
+  EnforcedStyle: trailing
+
+DoubleNegation:
+  Enabled: false
+
+EndAlignment:
+  AlignWith: variable
+
+FirstParameterIndentation:
+  Enabled: false
+
+FormatString:
+  EnforcedStyle: percent
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+GuardClause:
+  Enabled: false
+
+HandleExceptions:
+  Enabled: false
+
+HasAndBelongsToMany:
+  Enabled: false
+
+IfUnlessModifier:
+  Enabled: false
+
+IndentArray:
+  EnforcedStyle: consistent
+
+IndentHash:
+  Enabled: false
+
+Lambda:
+  Enabled: false
+
+LineLength:
+  Max: 100
+
+Loop:
+  Enabled: false
+
+MethodCalledOnDoEndBlock:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+ModuleLength:
+  Enabled: false
+
+MultilineMethodCallBraceLayout:
+  Enabled: false
+
+MultilineMethodCallIndentation:
+  Enabled: false
+
+MultilineOperationIndentation:
+  Enabled: false
+
+Next:
+  Enabled: false
+
+OutputSafety:
+  Exclude:
+    - test/**/*
+    - spec/**/*
+
+PerceivedComplexity:
+  Enabled: false
+
+PredicateName:
+  Enabled: false
+
+RedundantMerge:
+  MaxKeyValuePairs: 1
+
+SignalException:
+  Enabled: false
+
+StructInheritance:
+  Enabled: false
+
+TrivialAccessors:
+  AllowPredicates: true
+
+WhileUntilModifier:
+  Enabled: false
+
+WordArray:
+  Enabled: false
