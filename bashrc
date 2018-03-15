@@ -67,5 +67,5 @@ function parse_git_dirty {
 
 export PS1="\[\e[96m\]\u\[\e[m\]@\[\e[96m\]\h\[\e[m\]:\[\e[96m\]\w\[\e[m\] \[\e[92m\]\`parse_git_branch\`\[\e[m\]\\n\$ "
 
-export VISUAL=atom
+export VISUAL=atom --wait
 export EDITOR="$VISUAL"
