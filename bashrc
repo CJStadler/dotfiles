@@ -18,6 +18,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 alias ls='ls --color=auto -alh'
+alias top='htop'
 
 source ~/.git-completion.bash
 
