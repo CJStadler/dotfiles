@@ -3,3 +3,5 @@
 	email = chrisstadler@gmail.com
 [core]
     editor = 'atom' --wait
+[log]
+    decorate = auto
