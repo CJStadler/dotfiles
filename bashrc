@@ -20,7 +20,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 alias ls='ls --color=auto -alh'
 alias top='htop'
 
-source ~/.git-completion.bash
+source /usr/share/bash-completion/completions/git
 
 # get current branch in git repo
 function parse_git_branch() {
