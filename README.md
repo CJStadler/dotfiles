@@ -9,6 +9,7 @@ ln -s ~/.dotfiles/bashrc ~/.bashrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/gitignore ~/.gitignore
 ln -s ~/.dotfiles/rubocop.yml ~/.rubocop.yml
+ln -s ~/.dotfiles/vimrc ~/.vimrc
 ```
 
 ### Notes
