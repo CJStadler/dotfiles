@@ -5,10 +5,6 @@ scriptencoding utf-8
 
 let mapleader = ","
 
-colorscheme github " https://github.com/endel/vim-github-colorscheme/blob/master/colors/github.vim
-highlight NonText guibg=#060606
-highlight Folded guibg=#0A0A0A guifg=#9090D0
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -81,7 +77,11 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wlangstroth/vim-racket'
 Plug 'djoshea/vim-autoread' " Reload files automatically from the filesystem.
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
+
+set background=light
+colorscheme PaperColor
 
 let g:gundo_prefer_python3 = 1 " Use python3 for gundo
 
