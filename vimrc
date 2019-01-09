@@ -80,6 +80,7 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wlangstroth/vim-racket'
+Plug 'djoshea/vim-autoread' " Reload files automatically from the filesystem.
 call plug#end()
 
 let g:gundo_prefer_python3 = 1 " Use python3 for gundo
