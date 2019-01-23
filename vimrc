@@ -78,12 +78,18 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'wlangstroth/vim-racket'
 Plug 'djoshea/vim-autoread' " Reload files automatically from the filesystem.
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'cohama/lexima.vim' " Auto-close parens.
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
+set t_Co=256
 set background=light
 colorscheme PaperColor
 
 let g:gundo_prefer_python3 = 1 " Use python3 for gundo
+
+map <C-\> :NERDTreeToggle<CR> " Ctrl-\ toggles file tree
 
 " Use ripgrep if available
 if executable('rg')
