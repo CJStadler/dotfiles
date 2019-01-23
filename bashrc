@@ -9,15 +9,13 @@ shopt -s histappend                      # append to history, don't overwrite it
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Python
 export PATH="$HOME/.local/bin:$PATH"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 alias ls='ls --color=auto -alh'
 alias top='htop'
@@ -73,5 +71,5 @@ function parse_git_dirty {
 
 export PS1="\[\e[96m\]\u\[\e[m\]@\[\e[96m\]\h\[\e[m\]:\[\e[96m\]\w\[\e[m\] \[\e[92m\]\`parse_git_branch\`\[\e[m\]\\n\$ "
 
-export VISUAL="atom --wait"
+export VISUAL=vim
 export EDITOR="$VISUAL"
