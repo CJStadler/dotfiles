@@ -15,6 +15,7 @@ set encoding=utf-8
 set list listchars=tab:»·,trail:·,nbsp:· " Display whitespace   
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
+set shiftwidth=2    "Indent by 4 spaces when using >>, <<, == etc.
 set expandtab       " tabs are spaces
 set number          " show line numbers
 set numberwidth=5
