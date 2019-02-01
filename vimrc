@@ -19,7 +19,7 @@ set shiftwidth=2    "Indent by 4 spaces when using >>, <<, == etc.
 set expandtab       " tabs are spaces
 set number          " show line numbers
 set numberwidth=5
-set clipboard=unnamed " use OS clipboard
+set clipboard=unnamedplus " use OS clipboard
 set showcmd         " show command in bottom bar
 set cursorline          " highlight current line
 set showmatch           " highlight matching [{()}]
@@ -82,6 +82,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'cohama/lexima.vim' " Auto-close parens.
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'ElmCast/elm-vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 set t_Co=256
@@ -101,3 +103,4 @@ endif
 
 let g:ctrlp_switch_buffer = 0 " Open files in new buffer
 
+let g:ale_lint_on_text_changed = 'never' " Lint only on save
