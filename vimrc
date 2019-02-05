@@ -26,9 +26,6 @@ set showmatch           " highlight matching [{()}]
 set ruler         " show the cursor position all the time
 set incsearch     " do incremental searching
 set hlsearch            " highlight matches
-set foldenable          " enable folding
-set foldmethod=indent   " fold based on indent level
-set foldlevelstart=10 " Open most fold by default.
 set wildignore+=*/.git/*,*/tmp/*,*.swp " Files to ignore for autocomplete
 set wildmenu            " visual autocomplete for command menu
 set autowrite     " Automatically :write before running commands
@@ -104,3 +101,7 @@ endif
 let g:ctrlp_switch_buffer = 0 " Open files in new buffer
 
 let g:ale_lint_on_text_changed = 'never' " Lint only on save
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+let g:elm_format_autosave = 1
