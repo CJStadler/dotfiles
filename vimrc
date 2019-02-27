@@ -65,6 +65,11 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+" Hide parts of GUI
+set guioptions-=m  " menu bar
+set guioptions-=T  " toolbar
+set guioptions-=r  " scrollbar
+
 " Plugins (using https://github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
@@ -81,6 +86,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ElmCast/elm-vim'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 set t_Co=256
