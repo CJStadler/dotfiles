@@ -88,6 +88,8 @@ Plug 'ElmCast/elm-vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'jez/vim-better-sml'
+Plug 'bohlender/vim-smt2'
 call plug#end()
 
 set t_Co=256
