@@ -19,6 +19,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 alias ls='ls --color=auto -alh'
 alias top='htop'
+alias python='/usr/bin/python3'
 
 source /usr/share/bash-completion/completions/git
 
