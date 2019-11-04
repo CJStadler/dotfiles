@@ -18,7 +18,7 @@ set softtabstop=2   " number of spaces in tab when editing
 set shiftwidth=2    "Indent by 4 spaces when using >>, <<, == etc.
 set expandtab       " tabs are spaces
 set number          " show line numbers
-set numberwidth=5
+set numberwidth=3
 set clipboard=unnamedplus " use OS clipboard
 set showcmd         " show command in bottom bar
 set cursorline          " highlight current line
@@ -68,7 +68,8 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Hide parts of GUI
 set guioptions-=m  " menu bar
 set guioptions-=T  " toolbar
-set guioptions-=r  " scrollbar
+set guioptions-=r  " right scrollbar
+set guioptions-=L  " left scrollbar
 
 " Plugins (using https://github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')
