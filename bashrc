@@ -77,3 +77,5 @@ source ~/.local/bin/virtualenvwrapper.sh
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+source ~/.config/broot/launcher/bash/br
