@@ -95,6 +95,7 @@ call plug#end()
 set t_Co=256
 set background=light
 colorscheme PaperColor
+set guifont=Hack\ Regular:h14
 
 let g:gundo_prefer_python3 = 1 " Use python3 for gundo
 

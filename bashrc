@@ -9,18 +9,13 @@ shopt -s histappend                      # append to history, don't overwrite it
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Python
 export PATH="$HOME/.local/bin:$PATH"
 
-alias ls='ls --color=auto -alh'
+alias ls='ls -G -alh'
 alias top='htop'
-
-source /usr/share/bash-completion/completions/git
 
 # get current branch in git repo
 function parse_git_branch() {
@@ -71,11 +66,7 @@ function parse_git_dirty {
 
 export PS1="\[\e[96m\]\u\[\e[m\]@\[\e[96m\]\h\[\e[m\]:\[\e[96m\]\w\[\e[m\] \[\e[92m\]\`parse_git_branch\`\[\e[m\]\\n\$ "
 
-export WORKON_HOME=~/Envs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
-
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-source ~/.config/broot/launcher/bash/br
+source /Users/chris/Library/Preferences/org.dystroy.broot/launcher/bash/br
