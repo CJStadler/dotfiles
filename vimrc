@@ -19,7 +19,6 @@ set shiftwidth=2    "Indent by 4 spaces when using >>, <<, == etc.
 set expandtab       " tabs are spaces
 set number          " show line numbers
 set numberwidth=3
-set clipboard=unnamedplus " use OS clipboard
 set showcmd         " show command in bottom bar
 set cursorline          " highlight current line
 set showmatch           " highlight matching [{()}]
