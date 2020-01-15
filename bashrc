@@ -76,3 +76,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ulimit -S -n 2048 # Increase open file limit.
+
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
