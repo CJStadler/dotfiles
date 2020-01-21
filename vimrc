@@ -48,6 +48,9 @@ set splitright
 set textwidth=80
 set colorcolumn=+1
 
+" Use line length of 100 for Rust
+autocmd bufreadpre *.rs setlocal textwidth=100
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
