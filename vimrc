@@ -115,3 +115,6 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:elm_format_autosave = 1
+
+" rust.vim uses 4 spaces for tabs but we are using 2.
+let g:rust_recommended_style = 0
