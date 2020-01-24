@@ -32,6 +32,7 @@ set backspace=2   " Backspace deletes like most programs in insert mode
 set history=50
 set laststatus=2 " Always show the statusline.
 set noshowmode " Don't show -- INSERT -- since the mode is shown by lightline.
+set foldmethod=indent
 
 " Store backups in /tmp
 set backup
