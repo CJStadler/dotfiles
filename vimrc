@@ -93,6 +93,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'jez/vim-better-sml'
 Plug 'bohlender/vim-smt2'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 
 set t_Co=256
@@ -122,3 +126,11 @@ let g:elm_format_autosave = 1
 let g:rustfmt_autosave = 1
 " rust.vim uses 4 spaces for tabs but we are using 2.
 let g:rust_recommended_style = 0
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['ra_lsp_server'],
+    \ }
+let g:LanguageClient_autostart = 1
+
+" Map go to definition
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
