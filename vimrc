@@ -121,6 +121,7 @@ let g:ctrlp_switch_buffer = 0 " Open files in new buffer
 let g:ale_lint_on_text_changed = 'never' " Lint only on save
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-a> :ALEDetail
 
 let g:elm_format_autosave = 1
 
