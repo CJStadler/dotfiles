@@ -92,6 +92,7 @@ Plug 'ElmCast/elm-vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'jez/vim-better-sml'
 Plug 'bohlender/vim-smt2'
 Plug 'autozimu/LanguageClient-neovim', {
