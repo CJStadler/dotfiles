@@ -89,16 +89,12 @@ Plug 'cohama/lexima.vim' " Auto-close parens.
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ElmCast/elm-vim'
-Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'jez/vim-better-sml'
 Plug 'bohlender/vim-smt2'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 set t_Co=256
@@ -119,21 +115,52 @@ endif
 
 let g:ctrlp_switch_buffer = 0 " Open files in new buffer
 
-let g:ale_lint_on_text_changed = 'never' " Lint only on save
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nmap <silent> <C-a> <Plug>(ale_detail)
-
 let g:elm_format_autosave = 1
 
-let g:rustfmt_autosave = 1
-" rust.vim uses 4 spaces for tabs but we are using 2.
-let g:rust_recommended_style = 0
+" Coc Configuration
+" =================
+" See https://github.com/neoclide/coc.nvim#example-vim-configuration
 
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['ra_lsp_server'],
-    \ }
-let g:LanguageClient_autostart = 1
+" TextEdit might fail if hidden is not set.
+set hidden
 
-" Map go to definition
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Navigate errors.
+nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
