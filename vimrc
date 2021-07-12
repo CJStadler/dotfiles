@@ -91,6 +91,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'jez/vim-better-sml'
 Plug 'bohlender/vim-smt2'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 call plug#end()
 
 set t_Co=256
